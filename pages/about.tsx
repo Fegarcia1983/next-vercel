@@ -1,23 +1,17 @@
-import Head from "next/head";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
+import { MainLayout } from "@/components/layouts/MainLayout";
+import { DarkLayout } from "@/components/layouts/DarkLayout";
 
 export default function AboutPage() {
   return (
-    <>
-      <Head>
-        <title>About | NextApp</title>
-        <meta name="description" content="AboutPage" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <h1 className={`${styles.title}`}>
-          Ir a <a href="/">Home</a>
-        </h1>
-      </main>
-    </>
+    <MainLayout>
+      <DarkLayout>
+        <h1>About Page</h1>
+        <hr />
+        <h2>
+          Ir a <Link href="/">Home</Link>
+        </h2>
+      </DarkLayout>
+    </MainLayout>
   );
 }
