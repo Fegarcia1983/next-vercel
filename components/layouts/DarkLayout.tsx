@@ -1,6 +1,6 @@
-import { PropsWithChildren } from "react";
+import { FC, PropsWithChildren } from "react";
 
-export const DarkLayout = ({ children }: PropsWithChildren) => {
+export const DarkLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div
       style={{

@@ -1,12 +1,12 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
+import { FC, PropsWithChildren } from "react";
 import { Navbar } from "../Navbar";
 import styles from "./MainLayout.module.css";
-import { PropsWithChildren } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const MainLayout = ({ children }: PropsWithChildren) => {
+export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div>
       <Head>
